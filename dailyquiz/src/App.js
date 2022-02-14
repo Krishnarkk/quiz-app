@@ -28,15 +28,16 @@ const App = () => {
     {id:1,marky:100},
     {id:2,marky:200},
     {id:3,marky:300},
-    // {id:4,marky:400},
-    // {id:5,marky:500},
-    // {id:6,marky:600},
-    // {id:7,marky:700},
-    // {id:8,marky:800},
-    // {id:9,marky:900},
-    // {id:10,marky:1000},
+    {id:4,marky:400},
+    {id:5,marky:500},
+    {id:6,marky:600},
+    {id:7,marky:700},
+    {id:8,marky:800},
+    {id:9,marky:900},
+    {id:10,marky:1000},
   ].reverse()
-
+ 
+  console.log(data.length)
   useEffect(()=>
   {
     num>1 && setScore(scorelist.find((s)=>s.id===num-1).marky);
@@ -45,7 +46,7 @@ const App = () => {
   <div className='app'>
     {guest?(<> 
     <div className='main'>
-      {time?<h1 className='resultText' >{guest} scored:{score}</h1>:(
+      {time?num-1===data.length?(<><h1 className='winner'>Congrats!!</h1><h1 className='resultText'>{guest} scored:{score}</h1></>):(<h1 className='resultText' >{guest} scored:{score}</h1>):(
         <>
       <div className='upper'>
              <div className='time'><Timer setTime={setTime} num={num}/></div>

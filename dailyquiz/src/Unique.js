@@ -6,10 +6,12 @@ const Unique = ({data,setTime,num,setNum}) => {
     const [className,setClassName]=useState('answer')
     console.log(data.length)
     useEffect(()=>{
-      if(data.length<=3){
+      if(num-1===data.length){
+         setTime(true)
+      }
       setQuestion(data[num-1])
       }
-    },[data,num])
+    ,[data,num,setTime])
 
 
       const delay=(duration,check)=>{
@@ -40,8 +42,8 @@ const Unique = ({data,setTime,num,setNum}) => {
   <div className='head'>
   <div className='question'>{question?.question}</div>
   <div className='answers'>
-      { question ?.answers?.map((a)=>
-      <h2 className={yourAns===a?className:'answer'} onClick={()=> handleClick(a)}>{a.text}</h2>
+      { question ?.answers?.map((a,index)=>
+      <h2 key={index} className={yourAns===a?className:'answer'} onClick={()=> handleClick(a)}>{a.text}</h2>
       )}
   </div>
   </div>

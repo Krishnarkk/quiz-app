@@ -6,9 +6,26 @@
 }
 .main{
   width: 75%;
-  background-color:violet;
+  /* background-color:violet; */
   display: flex;
   flex-direction: column;
+  
+    background: linear-gradient(300deg,deepskyblue,darkviolet,#f12992,#b31a6b);
+    background-size: 240% 240%;
+    animation: gradient-animation 24s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  
 
 }
 .upper{
@@ -22,10 +39,17 @@
 }
 .resultText{
   position: relative;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  top: -10%;
+  width: 700px;
+  padding: 3px;
+  border-radius: 5px;
+  background-color: rgb(43, 226, 58);
+  /* bottom: 0; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* left: 0; */
+  /* right: 0; */
   margin: auto;
 }
 .head{
@@ -56,6 +80,21 @@ font-size: 30px;
 position: absolute;
 bottom: 10px;
 left: 80px;
+}
+
+.winner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  position: relative;
+  top: 30%;
+  width: 200px;
+  padding: 3px;
+  border-radius: 5px;
+  background-color:red;
+  color: aqua;
+  font-weight: 900;
 }
 .answers{
   display: flex;
@@ -128,7 +167,23 @@ left: 80px;
   justify-content: center;
   align-items: center;
   display: flex;
-}
+  
+    background: linear-gradient(300deg,#1aabb3,#adb31a,#1ab3a4,#343132,#e5d4d9);
+    background-size: 300% 300%;
+    animation: gradient-animation 30s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 .scorelist{
   list-style: none;
   width: 100%;
