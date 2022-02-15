@@ -1,8 +1,19 @@
 .app{
   height:100vh;
   display: flex;
-  background-color: #020230;
+  /* background-color: #020230; */
  color: aliceblue;
+
+ background: linear-gradient(12deg, #b9491f, #d01515, #1612d0);
+    background-size: 600% 600%;
+
+    animation: AnimationName 12s ease infinite;
+}
+
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
 .main{
   width: 75%;
@@ -43,12 +54,17 @@
   width: 700px;
   padding: 3px;
   border-radius: 5px;
-  background-color: rgb(43, 226, 58);
+  background-color: rgba(224, 247, 20, 0.774);
+  color: #101101;
+  outline: none;
   /* bottom: 0; */
   display: flex;
   justify-content: center;
   align-items: center;
   /* left: 0; */
+  font-weight: bolder;
+  line-height: 3em;
+  font-size: 3em;
   /* right: 0; */
   margin: auto;
 }
@@ -72,7 +88,9 @@
 width: 70px;
 height: 70px;
 border-radius: 50%;
-border: 10px solid black;
+border: 10px solid linear-gradient(12deg, #121402, #d0a315, #d05f12);
+
+    
 display: flex;
 align-items: center;
 justify-content: center;
@@ -80,6 +98,23 @@ font-size: 30px;
 position: absolute;
 bottom: 10px;
 left: 80px;
+
+  background: linear-gradient(12deg, #121402, #614065, #d05f12);
+  background-size: 600% 600%;
+
+  -webkit-animation: AnimationName 12s ease infinite;
+  animation: AnimationName 12s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
 }
 
 .winner{
@@ -88,7 +123,7 @@ left: 80px;
   align-items: center;
   margin: auto;
   position: relative;
-  top: 30%;
+  top: 22%;
   width: 200px;
   padding: 3px;
   border-radius: 5px;
@@ -233,7 +268,10 @@ left: 80px;
   padding: auto;
   border: none;
   text-align: center;
-  font-size: 20px;
+  font-size: 28px;
+  padding: 1em;
+  margin: 1em;
+  line-height: 2em;
 }
 .nam:focus{
   outline: none;
@@ -244,5 +282,8 @@ left: 80px;
   border-radius: 10px;
   padding: auto;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 25px;
+  border: none;
+  outline: none;
+
 }

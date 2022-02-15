@@ -4,7 +4,6 @@ const Unique = ({data,setTime,num,setNum}) => {
     const[question,setQuestion]=useState(null)
     const[yourAns,setYourans]=useState(null)
     const [className,setClassName]=useState('answer')
-    console.log(data.length)
     useEffect(()=>{
       if(num-1===data.length){
          setTime(true)

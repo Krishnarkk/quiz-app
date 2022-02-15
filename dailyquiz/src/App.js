@@ -1,17 +1,3 @@
-// import './App.css';
-// import Quiz from './Quiz';
-// function App() {
-//   return (
-//     <div className="App">
-//        <h1>HWllll</h1>
-//        <Quiz/>
-//     </div>
-//   );
-// }
-
-// export default App;
-
-
 import React,{useEffect, useState} from 'react';
 import './App.css'
 import Unique from './Unique';
@@ -37,7 +23,6 @@ const App = () => {
     {id:10,marky:1000},
   ].reverse()
  
-  console.log(data.length)
   useEffect(()=>
   {
     num>1 && setScore(scorelist.find((s)=>s.id===num-1).marky);
@@ -46,7 +31,7 @@ const App = () => {
   <div className='app'>
     {guest?(<> 
     <div className='main'>
-      {time?num-1===data.length?(<><h1 className='winner'>Congrats!!</h1><h1 className='resultText'>{guest} scored:{score}</h1></>):(<h1 className='resultText' >{guest} scored:{score}</h1>):(
+      {time?num-1===data.length?(<><h1 className='winner'>Congrats!!</h1><h1 className='resultText'>{guest} Scored:{score}</h1></>):(<h1 className='resultText' >{guest} Scored:{score}</h1>):(
         <>
       <div className='upper'>
              <div className='time'><Timer setTime={setTime} num={num}/></div>
